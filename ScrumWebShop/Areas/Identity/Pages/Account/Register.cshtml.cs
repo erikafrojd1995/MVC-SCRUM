@@ -31,7 +31,7 @@ namespace ScrumWebShop.Areas.Identity.Pages.Account
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager) 
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -50,32 +50,32 @@ namespace ScrumWebShop.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [Display(Name = "Förnamn")]
+            [Display(Name = "Firstname")]
             public string FirstName { get; set; }
 
             [Required]
-            [Display(Name = "Efternman")]
+            [Display(Name = "Lastname")]
             public string LastName { get; set; }
 
             [Required]
-            [Display(Name = "Adress")]
-            public string StreetAddress { get; set; }
+            [Display(Name = "Phonenumber")]
+            public string PhoneNumber { get; set; }
 
             [Required]
-            [Display(Name = "Ort")]
+            [Display(Name = "City")]
             public string City { get; set; }
 
             [Required]
-            [Display(Name = "Postnummer")]
-            public string Zipcode { get; set; }
-
-            [Required]
-            [Display(Name = "Land")]
+            [Display(Name = "Country")]
             public string Country { get; set; }
 
             [Required]
-            [Display(Name = "Telefonnummer")]
-            public string PhoneNumber { get; set; }
+            [Display(Name = "Postal code")]
+            public string PostalCode { get; set; }
+
+            [Required]
+            [Display(Name = "Street address")]
+            public string StreetAdress { get; set; }
 
             [Required]
             [EmailAddress]
@@ -108,35 +108,32 @@ namespace ScrumWebShop.Areas.Identity.Pages.Account
             {
 
                 var usersExists = _userManager.Users.Any();
-                if (!usersExists)
+                if (!usersExists) 
                 {
                     await _roleManager.CreateAsync(new IdentityRole("Administrator"));
-                    await _roleManager.CreateAsync(new IdentityRole("Customer"));
+                    await _roleManager.CreateAsync(new IdentityRole("StandardUser"));
                 }
 
-
-                var user = new ApplicationUser { 
+                var user = new ApplicationUser {
                     FirstName = Input.FirstName,
                     LastName = Input.LastName,
-                    StreetAddress = Input.StreetAddress,
-                    City = Input.City,
-                    Zipcode = Input.Zipcode,
-                    Country = Input.Country,
                     PhoneNumber = Input.PhoneNumber,
-                    UserName = Input.Email, 
-                    Email = Input.Email 
-                };
+                    StreetAdress = Input.StreetAdress,
+                    PostalCode = Input.PostalCode,
+                    Country = Input.Country,
+                    City = Input.City,
+                    UserName = Input.Email,
+                    Email = Input.Email };
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    if(!usersExists)
-                    {
+
+                    if (!usersExists)
                         await _userManager.AddToRoleAsync(user, "Administrator");
-                    }
                     else
-                    {
-                        await _userManager.AddToRoleAsync(user, "Customer");
-                    }
+                        await _userManager.AddToRoleAsync(user, "StandardUser");
+                    
 
                     _logger.LogInformation("User created a new account with password.");
 
