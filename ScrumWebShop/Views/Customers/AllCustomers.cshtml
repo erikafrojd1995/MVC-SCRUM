@@ -17,9 +17,9 @@
             <th>Land</th>
             <th>Telefon</th>
             <th>Email</th>
-            <th>Användarnam</th>
+            @*<th>Användarnam</th>*@
             @*<th>Role</th>*@
-            <th></th>
+            @*<th></th>*@
         </tr>
     </thead>
     <tbody>
@@ -36,12 +36,12 @@
                     <td>@customer.Country</td>
                     <td>@customer.PhoneNumber</td>
                     <td>@customer.Email</td>
-                    <td>@customer.UserName</td>
+                    @*<td>@customer.UserName</td>*@
                     @*<td>@customer.Role</td>*@
-                    <th>
+                    @*<th>
                         <a class="btn-sm btn-danger" asp-controller="Customers" asp-action="EditCustomer" asp-route-id="@customer.Id">Edit</a>
                         <a class="btn-sm btn-danger" asp-controller="Customers" asp-action="DeleteCustomer" asp-route-id="@customer.Id">Delete</a>
-                    </th>
+                    </th>*@
                 </tr>
             }
         }
