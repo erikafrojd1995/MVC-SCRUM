@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CustomerViewModel>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>Customers</h1>
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cusotomer Id</th>
+                <th>Customer Name</th>
+                <th>Customer Telephone</th>
+                <th>Customer Email</th>
+                <th>Role</th>
+
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            @foreach (var user in Model)
+            {
+                if (user.Role == "StandardUser")
+                {
+                    <tr>
+                        <td class="text-muted"> @user.Id</td>
+                        <td>@user.FirstName @user.LastName </td>
+                        <td>@user.PhoneNumber</td>
+                        <td>@user.Email</td>
+                        <td class="text-muted"> @user.Role</td>
+
+                        <td>
+                            <a class="btn btn-secondary btn-sm" asp-controller="Admin" asp-action="EditUser" asp-route-id="@user.Id"> Edit</a>
+                            <a class="btn btn-secondary btn-sm" asp-controller="Admin" asp-action="DeleteUser" asp-route-id="@user.Id"> Delete</a>
+                        </td>
+                    </tr>
+                }
+
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <p>There is no customers. :-(</p>
+}
