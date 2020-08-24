@@ -16,5 +16,6 @@ namespace ScrumWebShop.Data
         }
 
         public DbSet<ScrumWebShop.Models.CustomerViewModel> CustomerViewModel { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
