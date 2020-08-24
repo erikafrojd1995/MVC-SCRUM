@@ -12,7 +12,7 @@ namespace ScrumWebShop.Data
         public int Id { get; set; }
         public string ProductNumber { get; set; }
         public string ProductName { get; set; }
-        public string ProductPrice { get; set; }
+        public decimal ProductPrice { get; set; }
         public string ProductDescription { get; set; }
         public string Brand { get; set; }
         public string Sex { get; set; }
@@ -21,3 +21,4 @@ namespace ScrumWebShop.Data
         public string Photo { get; set; }
     }
 }
+

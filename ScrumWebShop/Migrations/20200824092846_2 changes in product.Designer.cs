@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ScrumWebShop.Data;
 
 namespace ScrumWebShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200824092846_2 changes in product")]
+    partial class _2changesinproduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -262,8 +264,8 @@ namespace ScrumWebShop.Migrations
                     b.Property<string>("ProductNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("ProductPrice")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("ProductPrice")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sex")
                         .HasColumnType("nvarchar(max)");
