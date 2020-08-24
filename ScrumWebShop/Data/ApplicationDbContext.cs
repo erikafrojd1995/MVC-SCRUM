@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ScrumWebShop.Models;
-using ScrumWebShop.Models.Product;
+
 
 namespace ScrumWebShop.Data
 {
@@ -14,7 +14,7 @@ namespace ScrumWebShop.Data
             : base(options)
         {
         }
-        public DbSet<CategoryModel> Categories { get; set; }
-        public DbSet<ProductModel> Products { get; set; }
+
+        public DbSet<ScrumWebShop.Models.CustomerViewModel> CustomerViewModel { get; set; }
     }
 }
