@@ -18,11 +18,19 @@ namespace ScrumWebShop.Controllers
             _context = context;
         }
 
-        // GET: Products
-        public async Task<IActionResult> Index()
+
+        //GET: Products + SEARCH BY KEYWORD in ProductName or ProductDescription
+        public IActionResult Index(string searchString)
         {
-            return View(await _context.Products.ToListAsync());
+            List<Product> products = _context.Products.ToList();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.ProductName.ToLower().Contains(searchString.ToLower()) || p.ProductDescription.ToLower().Contains(searchString.ToLower())).ToList();
+            }
+            return View("Index", products);
         }
+
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -159,5 +167,6 @@ namespace ScrumWebShop.Controllers
         {
             return _context.Products.Any(e => e.Id == id);
         }
+
     }
 }
