@@ -65,16 +65,6 @@
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Type" class="control-label"></label>
-                <select asp-for="Type" class="form-control">
-                    @foreach (var type in ViewBag.Types)
-                    {
-                        <option value="@type">@type</option>
-                    }
-                </select>
-                <span asp-validation-for="Type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Photo" class="control-label"></label>
                 <input asp-for="Photo" class="form-control" />
                 <span asp-validation-for="Photo" class="text-danger"></span>
