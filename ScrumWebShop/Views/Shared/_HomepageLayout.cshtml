@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
-<body>
+<body style="height: 100%">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e0e0e0">
 
             <div class="container">
 
-                <div class="logo" >
-                    <img class="logoimg" src=  @Url.Content("~/images/brandlogo.png") alt="Sample Photo" />
-                  Solglasögon-Shoppen
+                <div class="logo">
+                    <img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />
+                    Solglasögon-Shoppen
                 </div>
 
 
@@ -56,18 +56,23 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - ScrumWebShop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            <a class="nav-link font-weight-bold " style="color: black;" asp-area="" asp-controller="Contact" asp-action="Contactus">Contact Us!</a>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="#"> ############ </a>
         </div>
+        <!-- Copyright -->
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

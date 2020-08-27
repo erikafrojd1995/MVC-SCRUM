@@ -22,15 +22,44 @@ namespace ScrumWebShop.Controllers
 
         [AllowAnonymous]
         //GET: Products + SEARCH BY KEYWORD in ProductName or ProductDescription
-        public IActionResult Index(string searchString)
+        public IActionResult Index(string productBrand, string productSex, string productColor, string searchString)
         {
-            List<Product> products = _context.Products.ToList();
+            var product = from p in _context.Products
+                          select p;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                products = products.Where(p => p.ProductName.ToLower().Contains(searchString.ToLower()) || p.ProductDescription.ToLower().Contains(searchString.ToLower())).ToList();
+                product = product.Where(p => p.ProductName.ToLower().Contains(searchString.ToLower()) || p.ProductDescription.ToLower().Contains(searchString.ToLower()));
             }
-            return View("Index", products);
+
+            if (!String.IsNullOrEmpty(productBrand))
+            {
+                product = product.Where(p => p.Brand == productBrand);
+            }
+
+            if (!String.IsNullOrEmpty(productSex))
+            {
+                product = product.Where(p => p.Sex == productSex);
+            }
+
+            if (!String.IsNullOrEmpty(productColor))
+            {
+                product = product.Where(p => p.Color == productColor);
+            }
+
+            var brands = (from p in _context.Products
+                          select p.Brand).Distinct().ToList();
+            ViewBag.Brands = brands;
+
+            var sexes = (from p in _context.Products
+                         select p.Sex).Distinct().ToList();
+            ViewBag.Sexes = sexes;
+
+            var colors = (from p in _context.Products
+                          select p.Color).Distinct().ToList();
+            ViewBag.Colors = colors;
+
+            return View(product.ToList());
         }
 
         [AllowAnonymous]
@@ -58,7 +87,6 @@ namespace ScrumWebShop.Controllers
             ViewBag.Brands = new string[] { "Oakley", "Rayban", "Polaroid", "Police" };
             ViewBag.Sex = new string[] { "Kvinnor", "Män", "Barn" };
             ViewBag.Colors = new string[] { "Grå", "Grön", "Blå" };
-            ViewBag.Types = new string[] { "Glasögon", "Solglasögon" };
 
             return View();
         }
@@ -68,7 +96,7 @@ namespace ScrumWebShop.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ProductNumber,ProductName,ProductPrice,ProductDescription,Brand,Sex,Color,Type,Photo")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,ProductNumber,ProductName,ProductPrice,ProductDescription,Brand,Sex,Color,Photo")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +124,6 @@ namespace ScrumWebShop.Controllers
             ViewBag.Brands = new string[] { "Oakley", "Rayban", "Polaroid", "Police" };
             ViewBag.Sex = new string[] { "Kvinnor", "Män", "Barn" };
             ViewBag.Colors = new string[] { "Grå", "Grön", "Blå" };
-            ViewBag.Types = new string[] { "Glasögon", "Solglasögon" };
 
             return View(product);
         }
@@ -106,7 +133,7 @@ namespace ScrumWebShop.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductNumber,ProductName,ProductPrice,ProductDescription,Brand,Sex,Color,Type,Photo")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ProductNumber,ProductName,ProductPrice,ProductDescription,Brand,Sex,Color,Photo")] Product product)
         {
             if (id != product.Id)
             {
