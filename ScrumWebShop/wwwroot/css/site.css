@@ -168,11 +168,9 @@ body {
 }
 
     .xop-left:hover, .xop-right:hover {
-        /* transform: scaleY(1.02); */
+/*         transform: scaleY(1.02); */
         filter: grayscale(80%);
     }
-
-
 
 .xop-button {
     border-radius: 2px;
@@ -195,6 +193,7 @@ body {
     .xop-button:hover {
         background: rgba(255,255,255,0.3);
         color: black;
+        text-decoration: none;
     }
 
 @media only screen and (max-width: 600px) {
