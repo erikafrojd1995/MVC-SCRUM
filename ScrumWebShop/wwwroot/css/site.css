@@ -1,20 +1,15 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
-#cart-icon-sm .ml-auto text-center .admin-nav {
-    display: block;
-}
 /* Provide sufficient contrast against white background */
 a {
-    color: #0366d6;
+  color: #0366d6;
 }
 
 .btn-primary {
@@ -79,31 +74,8 @@ body {
     color: black;
 }
 
-.fas fa-user {
-    color:black;
-}
-
 .nav-tablet {
     display: none !important;
-}
-
-.navbar .navbar-navigation .navbar-nav {
-    margin-right: 3rem;
-}
-
-#cart-icon-sm {
-    margin-top:9px;
-}
-
-
-.logoimg {
-    height: 50px;
-    width: 70px;
-    margin-bottom: 16px;
-}
-
-.admin-dropdown-items {
-    align-content: normal
 }
 
 @media (min-width: 576px) {
