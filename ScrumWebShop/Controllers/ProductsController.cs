@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using ScrumWebShop.Data;
 
 namespace ScrumWebShop.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -18,7 +20,7 @@ namespace ScrumWebShop.Controllers
             _context = context;
         }
 
-
+        [AllowAnonymous]
         //GET: Products + SEARCH BY KEYWORD in ProductName or ProductDescription
         public IActionResult Index(string productBrand, string productSex, string productColor, string searchString)
         {
@@ -60,7 +62,7 @@ namespace ScrumWebShop.Controllers
             return View(product.ToList());
         }
 
-
+        [AllowAnonymous]
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
