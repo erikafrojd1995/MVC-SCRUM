@@ -7,9 +7,12 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+#cart-icon-sm .ml-auto text-center .admin-nav {
+    display: block;
+}
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
@@ -74,8 +77,13 @@ body {
     color: black;
 }
 
+.fas fa-user {
+    color:black;
+}
+
 .nav-tablet {
     display: none !important;
+    
 }
 
 @media (min-width: 576px) {
