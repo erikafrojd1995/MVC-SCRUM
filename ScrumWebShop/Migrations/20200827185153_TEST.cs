@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ScrumWebShop.Migrations
 {
-    public partial class test : Migration
+    public partial class TEST : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
