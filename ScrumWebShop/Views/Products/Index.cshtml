@@ -19,24 +19,57 @@
 
         <!-- SEARCH BAR: Sök på namn/nyckelord i ProductName & ProductDescription -->
 
-        <div class="searchBar">
-            <form method="get" class="container">
-                <p class="mx-3 text-white">Sök på namn eller nyckelord: </p>
-                <div class="input-group mb-4">
-                    <input type="text" name="SearchString" class="form-control m-2" placeholder="">
-                    <div class="input-group-append">
-                        <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
-                                id="button-addon2" value="Search">
-                            Sök
-                        </button>
-                        <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
-                                id="button-addon2" value="Search" href="SearchByKeyword">
-                            Visa alla produkter
-                        </button>
-                    </div>
+<div class="searchBar">
+    <form form method="get" class="container">
+        <div class="form-row">
+            <div class="col-2">
+                <select name="ProductBrand" class="form-control">
+                    <option value="">Brand:</option>
+                    @foreach (var pb in ViewBag.Brands)
+                    {
+                        <option value="@pb">@pb</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductSex" class="form-control">
+                    <option value="">Kön:</option>
+                    @foreach (var ps in @ViewBag.Sexes)
+                    {
+                        <option value="@ps">@ps</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductColor" class="form-control">
+                    <option value="">Färg:</option>
+                    @foreach (var pc in @ViewBag.Colors)
+                    {
+                        <option value="@pc"> @pc</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-3">
+                <input type="text" name="SearchString" class="form-control">
+            </div>
+            <div class="col-1">
+                <div class="input-group-append">
+                    <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
+                            id="button-addon2" value="Search">
+                        Sök
+                    </button>
                 </div>
-            </form>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
+                        id="button-addon2" value="Search" href="Index">
+                    Visa alla
+                </button>
+            </div>
         </div>
+    </form>
+</div>
 
 
 
@@ -116,24 +149,57 @@
 
         <!-- SEARCH BAR: Sök på namn/nyckelord i ProductName & ProductDescription -->
 
-        <div class="searchBar">
-            <form method="get" class="container">
-                <p class="mx-3 text-white">Sök på namn eller nyckelord: </p>
-                <div class="input-group mb-4">
-                    <input type="text" name="SearchString" class="form-control m-2" placeholder="">
-                    <div class="input-group-append">
-                        <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
-                                id="button-addon2" value="Search">
-                            Sök
-                        </button>
-                        <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
-                                id="button-addon2" value="Search" href="SearchByKeyword">
-                            Visa alla produkter
-                        </button>
-                    </div>
+<div class="searchBar">
+    <form form method="get" class="container">
+        <div class="form-row">
+            <div class="col-2">
+                <select name="ProductBrand" class="form-control">
+                    <option value="">Brand:</option>
+                    @foreach (var pb in ViewBag.Brands)
+                    {
+                        <option value="@pb">@pb</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductSex" class="form-control">
+                    <option value="">Kön:</option>
+                    @foreach (var ps in @ViewBag.Sexes)
+                    {
+                        <option value="@ps">@ps</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductColor" class="form-control">
+                    <option value="">Färg:</option>
+                    @foreach (var pc in @ViewBag.Colors)
+                    {
+                        <option value="@pc"> @pc</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-3">
+                <input type="text" name="SearchString" class="form-control">
+            </div>
+            <div class="col-1">
+                <div class="input-group-append">
+                    <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
+                            id="button-addon2" value="Search">
+                        Sök
+                    </button>
                 </div>
-            </form>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
+                        id="button-addon2" value="Search" href="Index">
+                    Visa alla
+                </button>
+            </div>
         </div>
+    </form>
+</div>
 
 
 
@@ -208,24 +274,57 @@ else
 {
     <!-- SEARCH BAR: Sök på namn/nyckelord i ProductName & ProductDescription -->
 
-    <div class="searchBar">
-        <form method="get" class="container">
-            <p class="mx-3 text-white">Sök på namn eller nyckelord: </p>
-            <div class="input-group mb-4">
-                <input type="text" name="SearchString" class="form-control m-2" placeholder="">
+<div class="searchBar">
+    <form form method="get" class="container">
+        <div class="form-row">
+            <div class="col-2">
+                <select name="ProductBrand" class="form-control">
+                    <option value="">Brand:</option>
+                    @foreach (var pb in ViewBag.Brands)
+                    {
+                        <option value="@pb">@pb</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductSex" class="form-control">
+                    <option value="">Kön:</option>
+                    @foreach (var ps in @ViewBag.Sexes)
+                    {
+                        <option value="@ps">@ps</option>
+                    }
+                </select>
+            </div>
+            <div class="col-2">
+                <select name="ProductColor" class="form-control">
+                    <option value="">Färg:</option>
+                    @foreach (var pc in @ViewBag.Colors)
+                    {
+                        <option value="@pc"> @pc</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-3">
+                <input type="text" name="SearchString" class="form-control">
+            </div>
+            <div class="col-1">
                 <div class="input-group-append">
-                    <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
+                    <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
                             id="button-addon2" value="Search">
                         Sök
                     </button>
-                    <button class="btn btn-md  waves-effect bg-white m-t" type="submit"
-                            id="button-addon2" value="Search" href="SearchByKeyword">
-                        Visa alla produkter
-                    </button>
                 </div>
             </div>
-        </form>
-    </div>
+            <div class="col-2">
+                <button class="btn btn-md  waves-effect bg-white m-t border-dark" type="submit"
+                        id="button-addon2" value="Search" href="Index">
+                    Visa alla
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 
