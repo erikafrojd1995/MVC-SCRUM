@@ -17,8 +17,7 @@
             <div class="container">
 
                 <div class="logo">
-                    <img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />
-                    Solglasögon-Shoppen
+                    <a asp-controller="Home" asp-action="Index" class="company-name"><img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />Solglasögon-Shoppen</a>
                 </div>
                 <div>
                     <a style="color: black; margin-right: 100px;" asp-area="" asp-controller="Home" asp-action="AboutUs">Om oss</a>
@@ -59,6 +58,7 @@
             </div>
         </div>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
