@@ -99,3 +99,88 @@ body {
         display: block !important;
     }
 }
+
+
+
+/*  ------------------------------------- HOME PAGE DESIGN ------------------------------------*/
+
+.section-homepage {
+    height: 100vh;
+}
+
+
+.div1, .div2 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.xop-container {
+    display: flex;
+}
+
+.div1, .div2 {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.div2 {
+    align-items: baseline;
+}
+
+.xop-left {
+    background: url(../images/FrontpageA.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+.xop-right {
+    background: url(../images/FrontpageB.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+    text-transform: uppercase;
+}
+
+    .xop-left:hover, .xop-right:hover {
+/*         transform: scaleY(1.02); */
+        filter: grayscale(80%);
+    }
+
+.xop-button {
+    border-radius: 2px;
+    color: #fff;
+    background-color: transparent;
+    padding: 20px 30px;
+    margin: 0 1%;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    min-width: 100px;
+    width: auto;
+}
+
+    .xop-button:hover {
+        background: rgba(255,255,255,0.3);
+        color: black;
+        text-decoration: none;
+    }
+
+@media only screen and (max-width: 600px) {
+    .xop-container {
+        flex-direction: column;
+    }
+}
+
+/*  ---------------------------------------------------------------------------------------------*/
+
