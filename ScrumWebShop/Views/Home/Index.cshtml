@@ -1,13 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_HomepageLayout.cshtml";
+    
 }
 
-<section class="xop-container section-homepage">
-    <div class="xop-left div1">
-        <a asp-controller="Products" asp-action="Index"  class="xop-button">köp</a>
+<section class="xop-container" style="width: 100vw; height: 100vh; position: absolute; left: 0;">
+    <div class="xop-left div1" style="padding: 0;">
+        <a asp-controller="Products" asp-action="Index" class="xop-button">köp</a>
     </div>
-    <div class="xop-right div2">
+    <div class="xop-right div2" style="padding: 0;">
         <a asp-controller="Products" asp-action="Index" class="xop-button">solglasögon</a>
     </div>
 </section>

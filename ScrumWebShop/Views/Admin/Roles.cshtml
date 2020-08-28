@@ -3,37 +3,37 @@
 @{
     ViewData["Title"] = "Roles";
 }
+<div class="container">
+    <h1>Roles </h1>
 
-<h1>Roles </h1>
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>RoleId</th>
+                    <th>Role Name</th>
+                    <th></th>
+                </tr>
+            </thead>
 
-@if (Model.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>RoleId</th>
-                <th>Role Name</th>
-                <th></th>
-            </tr>
-        </thead>
+            <tbody>
 
-        <tbody>
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td class="text-muted"> @role.Id</td>
+                        <td>@role.Name </td>
+                    </tr>
+                }
 
-            @foreach (var role in Model)
-            {   
-            <tr>
-                <td class="text-muted"> @role.Id</td>
-                <td>@role.Name </td>
-            </tr>
-            }
-
-        </tbody>
-    </table>
-}
-else
-{
-<p>There is no roles. :-( </p>
-}
-    
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>There is no roles. :-( </p>
+    }
 
 
+    </div>

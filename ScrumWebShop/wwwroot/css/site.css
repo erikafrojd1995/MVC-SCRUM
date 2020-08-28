@@ -132,7 +132,7 @@ body {
     background-size: cover;
     background-position: center;
     flex: 1;
-    padding: 1rem;
+
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }
@@ -142,7 +142,7 @@ body {
     background-size: cover;
     background-position: center;
     flex: 1;
-    padding: 1rem;
+
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }

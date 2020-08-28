@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <header>
         <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e0e0e0">
 
             <div class="container">
 
                 <div class="logo">
-                    <a asp-controller="Home" asp-action="Index" class="company-name"><img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />Solglasögon-Shoppen</a>
+                    <a stype="color: black;" asp-controller="Home" asp-action="Index" class="company-name"><img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />Solglasögon-Shoppen</a>
                 </div>
                 <div>
                     <a style="color: black; margin-right: 100px;" asp-area="" asp-controller="Home" asp-action="AboutUs">Om oss</a>
@@ -61,17 +61,13 @@
 
     <div class="container">
         <main role="main" class="pb-3">
+
             @RenderBody()
-        
+
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - ScrumWebShop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            <a class="nav-link font-weight-bold " style="color: black;" asp-area="" asp-controller="Contact" asp-action="Contactus">Contact Us!</a>
-        </div>
-    </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
