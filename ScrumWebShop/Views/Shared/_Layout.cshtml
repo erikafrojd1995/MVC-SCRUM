@@ -66,9 +66,11 @@
 
         </main>
     </div>
-
-            <footer class="page-footer font-small" style="background-color: #e0e0e0; position: absolute ;bottom: 0 ; width: 100%;">
-                <div class="d-flex container justify-content-lg-around  mt-3 mb-3">
+    <div id="page-conatinerfooter">
+        <div id="content-wrapfooter">
+            <footer class="page-footer font-small">
+                <!-- tog bort : style="background-color: #e0e0e0" i slutet på ovanstående-->
+                <div class="d-flex container justify-content-lg-around mt-3">
                     <div class="">
                         <a asp-controller="Home" asp-action="AboutUs" class="company-name">About us</a>
                     </div>
@@ -77,19 +79,19 @@
                     </div>
                     <div class="">
                         <!-- Facebook -->
-                        <a class="fb-ic" href="https://www.facebook.com/">
+                        <a class="fb-ic">
                             <i class="fab fa-facebook-f white-text mr-4"> </i>
                         </a>
                         <!-- Twitter -->
-                        <a class="tw-ic" href="https://www.twitter.com/">
+                        <a class="tw-ic">
                             <i class="fab fa-twitter white-text mr-4"> </i>
                         </a>
                         <!--Linkedin -->
-                        <a class="li-ic" href="https://www.linkedin.com/">
+                        <a class="li-ic">
                             <i class="fab fa-linkedin-in white-text mr-4"> </i>
                         </a>
                         <!--Instagram-->
-                        <a class="ins-ic" href="https://www.instagram.com">
+                        <a class="ins-ic">
                             <i class="fab fa-instagram white-text"> </i>
                         </a>
 
@@ -98,10 +100,12 @@
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3">
                     &copy; 2020 - <a asp-controller="Home" asp-action="Index" class="company-name">Solglasögon-Shoppen</a>
-                    @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </div>
                 <!-- Copyright -->
             </footer>
+            </div>
+        </div>
 
 
             <script src="~/lib/jquery/dist/jquery.min.js"></script>
