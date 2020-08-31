@@ -17,11 +17,8 @@
             <div class="container">
 
                 <div class="logo">
-                    <img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />
-                    Solglasögon-Shoppen
+                    <a asp-controller="Home" asp-action="Index" class="company-name"><img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />Solglasögon-Shoppen</a>
                 </div>
-
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -45,16 +42,6 @@
                 </div>
             </div>
         </nav>
-        <div class="navbar navbar-expand-sm nav-tablet" style="border-bottom: gray solid 0.3px">
-            <div class="container " style="width: 400px; margin: auto;">
-                <div class="navbar-nav mr-auto text-uppercase" style="display: flex; justify-content: space-between;  width: 100%; ">
-
-                    <div class="nav-item">
-                        <a class="nav-link font-weight-bold " style="color: black;" asp-area="" asp-controller="Products" asp-action="Index">Solglasögon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <main role="main">

@@ -16,11 +16,9 @@
 
             <div class="container">
 
-                <div class="logo" >
-                    <img class="logoimg" src=  @Url.Content("~/images/brandlogo.png") alt="Sample Photo" />
-                  Solglasögon-Shoppen
+                <div class="logo">
+                    <a asp-controller="Home" asp-action="Index" class="company-name"><img class="logoimg" src=@Url.Content("~/images/brandlogo.png") alt="Sample Photo" />Solglasögon-Shoppen</a>
                 </div>
-
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
                         aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,12 +60,45 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - ScrumWebShop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            <a class="nav-link font-weight-bold " style="color: black;" asp-area="" asp-controller="Contact" asp-action="Contactus">Contact Us!</a>
+
+    <!-- Footer 2    -->
+    <footer class="page-footer font-small" style="background-color: #e0e0e0">
+        <div class="d-flex container justify-content-lg-around mt-5">
+            <div class="">
+                <a asp-controller="Home" asp-action="AboutUs" class="company-name">About us</a>
+            </div>
+            <div class="">
+                <a asp-controller="Contacts" asp-action="Index" class="company-name">Kontakt</a>
+            </div>
+            <div class="">
+                <!-- Facebook -->
+                <a class="fb-ic">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic">
+                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                    <i class="fab fa-instagram white-text"> </i>
+                </a>
+
+            </div>
+            </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" >
+            &copy; 2020 - <a asp-controller="Home" asp-action="Index" class="company-name">Solglasögon-Shoppen</a>
+            @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
         </div>
+        <!-- Copyright -->
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
