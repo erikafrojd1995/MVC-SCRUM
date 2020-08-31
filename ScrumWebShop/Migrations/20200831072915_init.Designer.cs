@@ -10,7 +10,7 @@ using ScrumWebShop.Data;
 namespace ScrumWebShop.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200828120503_init")]
+    [Migration("20200831072915_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

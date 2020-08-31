@@ -67,6 +67,43 @@
         </main>
     </div>
 
+    <!-- Footer 2    -->
+    <footer class="page-footer font-small" style="background-color: #e0e0e0">
+        <div class="d-flex container justify-content-lg-around mt-5">
+            <div class="">
+                <a asp-controller="Home" asp-action="AboutUs" class="company-name">About us</a>
+            </div>
+            <div class="">
+                <a asp-controller="Contacts" asp-action="Index" class="company-name">Kontakt</a>
+            </div>
+            <div class="">
+                <!-- Facebook -->
+                <a class="fb-ic" href="https://www.facebook.com/">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic" href="https://www.twitter.com/">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a class="li-ic" href="https://www.linkedin.com/">
+                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic" href="https://www.instagram.com">
+                    <i class="fab fa-instagram white-text"> </i>
+                </a>
+
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            &copy; 2020 - <a asp-controller="Home" asp-action="Index" class="company-name">Solglasögon-Shoppen</a>
+            @*<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
+        </div>
+        <!-- Copyright -->
+    </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
