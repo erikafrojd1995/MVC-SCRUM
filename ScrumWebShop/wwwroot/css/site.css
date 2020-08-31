@@ -7,6 +7,7 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+
 #cart-icon-sm .ml-auto text-center .admin-nav {
     display: block;
 }
@@ -30,8 +31,10 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -104,11 +107,11 @@ button.accept-policy {
 
 /*  ------------------------------------- HOME PAGE DESIGN ------------------------------------*/
 
-.section-homepage {
-    height: 100vh;
-}
 
 
+
+
+/*  ---------------------------------------------------------------------------------------------*/
 .div1, .div2 {
     display: flex;
     align-items: flex-end;
@@ -132,8 +135,6 @@ button.accept-policy {
     background-size: cover;
     background-position: center;
     flex: 1;
-
-
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }
@@ -143,14 +144,14 @@ button.accept-policy {
     background-size: cover;
     background-position: center;
     flex: 1;
- 
-
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }
 
+
+
     .xop-left:hover, .xop-right:hover {
-/*         transform: scaleY(1.02); */
+        /*         transform: scaleY(1.02); */
         filter: grayscale(80%);
     }
 
@@ -183,12 +184,6 @@ button.accept-policy {
         flex-direction: column;
     }
 }
-
-
-
-
-
-/*  ---------------------------------------------------------------------------------------------*/
 
 /* ---  NAVBAR  --- */
 a.company-name {
