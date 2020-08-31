@@ -196,20 +196,14 @@ a.company-name {
     }
 
 
-#page-conatinerfooter {
-    position: relative;
-    min-height: 100vh;
-}
-
-
-
-#content-wrapfooter {
-    padding-bottom: 2.5rem;
-}
-
 .page-footer {
-    position: absolute;
+
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
+    background-color: #e0e0e0;
+    
+    text-align: center;
+
 }
