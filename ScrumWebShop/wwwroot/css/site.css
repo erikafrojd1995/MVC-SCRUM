@@ -1,8 +1,6 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -85,25 +83,7 @@ button.accept-policy {
 
 .nav-tablet {
     display: none !important;
-}
-
-.navbar .navbar-navigation .navbar-nav {
-    margin-right: 3rem;
-}
-
-#cart-icon-sm {
-    margin-top:9px;
-}
-
-
-.logoimg {
-    height: 50px;
-    width: 70px;
-    margin-bottom: 16px;
-}
-
-.admin-dropdown-items {
-    align-content: normal
+    
 }
 
 @media (min-width: 576px) {
@@ -152,7 +132,7 @@ button.accept-policy {
     background-size: cover;
     background-position: center;
     flex: 1;
-    padding: 1rem;
+
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }
@@ -162,7 +142,7 @@ button.accept-policy {
     background-size: cover;
     background-position: center;
     flex: 1;
-    padding: 1rem;
+
     transition: all .2s ease-in-out;
     text-transform: uppercase;
 }
