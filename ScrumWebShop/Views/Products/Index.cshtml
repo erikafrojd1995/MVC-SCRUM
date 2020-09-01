@@ -329,68 +329,416 @@
 
 
         <!-- LIST AV ALLA PRODUKTER  -->
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ProductNumber)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ProductName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ProductPrice)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ProductDescription)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Brand)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Sex)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Color)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Photo)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ProductNumber)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ProductName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ProductPrice)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ProductDescription)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Brand)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Sex)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Color)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Photo)
-                        </td>
+        <!--
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProductNumber)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProductName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProductPrice)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProductDescription)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Brand)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Sex)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Color)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Photo)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductNumber)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductPrice)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProductDescription)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Brand)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Sex)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Color)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Photo)
+                                </td>
 
-                    </tr>
-                }
-            </tbody>
-        </table>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+        -->
+
+
     }
+    <section class="text-center mb-4 mt-5">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Rayban</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">Gucci</a>
+
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>1139:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Rayban</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">Gucci</a>
+
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>1139:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Solglasögon</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">
+                                    Glasögon
+                                    <span class="badge badge-pill primary-color">Toppsäljare</span>
+                                </a>
+                            </strong>
+                            <button type="button" class="btn btn-light">Köp</button>
+                        </h5>
+
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>99:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Fourth column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Lorem</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">Brillor</a>
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>2192:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Fourth column-->
+
+        </div>
+        <!--Grid row-->
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Solglasögon</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">
+                                    lorem
+                                    <span class="badge badge-pill danger-color">Ny</span>
+                                </a>
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>120:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Solbrillor</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">Lorem</a>
+                            </strong>
+
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>139:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Glajjor</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">
+                                    Glasögon
+                                </a>
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>9999:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Grid column-->
+            <!--Fourth column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <!--Card-->
+                <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img src="~/images/glasogon.jpg" class="card-img-top"
+                             alt="">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <!--Card image-->
+                    <!--Card content-->
+                    <div class="card-body text-center">
+                        <!--Category & Title-->
+                        <a href="" class="grey-text">
+                            <h5>Solbrillor</h5>
+                        </a>
+                        <h5>
+                            <strong>
+                                <a href="" class="dark-grey-text">Lorem</a>
+                            </strong>
+                        </h5>
+                        <button type="button" class="btn btn-light">Köp</button>
+                        <h4 class="font-weight-bold grey-text">
+                            <strong>2129:-</strong>
+                        </h4>
+
+                    </div>
+                    <!--Card content-->
+
+                </div>
+                <!--Card-->
+
+            </div>
+            <!--Fourth column-->
+
+        </div>
+        <!--Grid row-->
+
+    </section>
 </div>
