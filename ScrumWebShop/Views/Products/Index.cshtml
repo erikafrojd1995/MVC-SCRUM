@@ -276,336 +276,46 @@
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4">
 
-                <!--Card-->
-                <div class="card">
+                @foreach (var product in Model)
+                {
+ 
+                    <!--Card-->
+                    <div class="card">
 
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Rayban</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">Gucci</a>
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img src=" @Html.DisplayFor(modelItem => product.Photo)" class="card-img-top"
+                                 alt="">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                        <!--Card image-->
+                        <!--Card content-->
+                        <div class="card-body text-center">
+                            <!--Category & Title-->
+                            <a href="" class="grey-text">
+                                <h5>@Html.DisplayNameFor(model => model.Brand)</h5>
+                            </a>
+                            <h5>
+                                <strong>
+                                    <a href="" class="dark-grey-text"> @Html.DisplayFor(modelItem => product.Bra)</a>
 
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>1139:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Rayban</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">Gucci</a>
-
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>1139:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Solglasögon</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">
-                                    Glasögon
-                                    <span class="badge badge-pill primary-color">Toppsäljare</span>
-                                </a>
-                            </strong>
+                                </strong>
+                            </h5>
                             <button type="button" class="btn btn-light">Köp</button>
-                        </h5>
 
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>99:-</strong>
-                        </h4>
+                            <h4 class="font-weight-bold grey-text">
+                                <strong> @Html.DisplayFor(modelItem => product.ProductPrice)</strong>
+                            </h4>
 
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Fourth column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Lorem</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">Brillor</a>
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>2192:-</strong>
-                        </h4>
+                        </div>
+                        <!--Card content-->
 
                     </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Fourth column-->
-
-        </div>
-        <!--Grid row-->
-        <!--Grid row-->
-        <div class="row wow fadeIn">
-
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Solglasögon</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">
-                                    lorem
-                                    <span class="badge badge-pill danger-color">Ny</span>
-                                </a>
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>120:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Solbrillor</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">Lorem</a>
-                            </strong>
-
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>139:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Glajjor</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">
-                                    Glasögon
-                                </a>
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>9999:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Grid column-->
-            <!--Fourth column-->
-            <div class="col-lg-3 col-md-6 mb-4">
-
-                <!--Card-->
-                <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay">
-                        <img src="~/images/glasogon.jpg" class="card-img-top"
-                             alt="">
-                        <a>
-                            <div class="mask rgba-white-slight"></div>
-                        </a>
-                    </div>
-                    <!--Card image-->
-                    <!--Card content-->
-                    <div class="card-body text-center">
-                        <!--Category & Title-->
-                        <a href="" class="grey-text">
-                            <h5>Solbrillor</h5>
-                        </a>
-                        <h5>
-                            <strong>
-                                <a href="" class="dark-grey-text">Lorem</a>
-                            </strong>
-                        </h5>
-                        <button type="button" class="btn btn-light">Köp</button>
-                        <h4 class="font-weight-bold grey-text">
-                            <strong>2129:-</strong>
-                        </h4>
-
-                    </div>
-                    <!--Card content-->
-
-                </div>
-                <!--Card-->
-
-            </div>
-            <!--Fourth column-->
+                    <!--Card-->
+                }
+            
 
         </div>
         <!--Grid row-->
