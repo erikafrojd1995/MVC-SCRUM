@@ -202,72 +202,6 @@
             </div>
 
 
-
-            <!-- LIST AV ALLA PRODUKTER  -->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ProductNumber)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ProductName)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ProductPrice)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ProductDescription)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Brand)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Sex)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Color)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Photo)
-                        </th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProductNumber)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProductName)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProductPrice)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProductDescription)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Brand)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Sex)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Color)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Photo)
-                            </td>
-
-                        </tr>
-                    }
-                </tbody>
-            </table>
-
         }
     }
     else
@@ -328,73 +262,9 @@
 
 
 
-        <!-- LIST AV ALLA PRODUKTER  -->
-        <!--
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ProductNumber)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ProductName)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ProductPrice)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.ProductDescription)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Brand)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Sex)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Color)
-                            </th>
-                            <th>
-                                @Html.DisplayNameFor(model => model.Photo)
-                            </th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProductNumber)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProductName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProductPrice)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProductDescription)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Brand)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Sex)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Color)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Photo)
-                                </td>
+    
 
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-
-        -->
+       
 
 
     }
