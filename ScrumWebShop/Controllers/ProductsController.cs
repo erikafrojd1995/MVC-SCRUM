@@ -81,6 +81,25 @@ namespace ScrumWebShop.Controllers
             return View(product);
         }
 
+        [AllowAnonymous]
+        public async Task<IActionResult> ProductPage(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = await _context.Products
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
         // GET: Products/Create
         public IActionResult Create()
         {
