@@ -306,6 +306,28 @@ namespace ScrumWebShop.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("ScrumWebShop.Models.CartItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("OrderId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId1");
+
+                    b.ToTable("OrderItems");
+                });
+
             modelBuilder.Entity("ScrumWebShop.Models.CustomerViewModel", b =>
                 {
                     b.Property<string>("Id")
@@ -341,6 +363,20 @@ namespace ScrumWebShop.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CustomerViewModel");
+                });
+
+            modelBuilder.Entity("ScrumWebShop.Models.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -392,6 +428,13 @@ namespace ScrumWebShop.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ScrumWebShop.Models.CartItem", b =>
+                {
+                    b.HasOne("ScrumWebShop.Models.Order", null)
+                        .WithMany("Items")
+                        .HasForeignKey("OrderId1");
                 });
 #pragma warning restore 612, 618
         }

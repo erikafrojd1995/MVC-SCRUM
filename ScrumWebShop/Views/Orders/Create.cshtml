@@ -1,0 +1,55 @@
+﻿@model ScrumWebShop.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Quantity</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.CartItems)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Quantity</td>
+                                <td>
+                                    <a class="btn btn-secondary" asp-action="AddItem" asp-route-id="@item.Id">+</a>
+                                    <a class="btn btn-secondary" asp-action="RemoveItem" asp-route-id="@item.Id">-</a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+                
+
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

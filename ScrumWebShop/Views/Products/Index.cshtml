@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div class="container">
+<div class="container" style="margin-bottom: 150px;">
     <h1>Products</h1>
     @if (SignInManager.IsSignedIn(User))
     {
@@ -282,61 +282,85 @@
                 int i = 0;
                 int nyRad = i % 4;
                 if (nyRad == 0)
-                    {
+                {
                     @: <div class="col-lg-3 col-md-6 mb-4">
                     }
 
-                           <a asp-action="ProductPage" asp-route-id="@product.Id">
-                               <!--Card-->
-                               <div class="card">
+                    <a asp-action="ProductPage" asp-route-id="@product.Id">
+                        <!--Card-->
+                        <div class="card">
 
-                                   <!--Card image-->
-                                   <div class="view overlay">
-                                       <img src=" @Html.DisplayFor(modelItem => product.Photo)" class="card-img-top"
-                                            alt="">
-                                      
-
-                                           <div class="mask rgba-white-slight"></div>
-                                       
-                                   </div>
-                                   <!--Card image-->
-                                   <!--Card content-->
-                                   <div class="card-body text-center">
-                                       <!--Category & Title-->
-                                       
-                                           <h5>Solglasögon</h5>
-                                      
-                                       <h5>
-                                           <strong>
-                                               <a href="" class="dark-grey-text"> @Html.DisplayFor(modelItem => product.Brand)</a>
-
-                                           </strong>
-                                       </h5>
-                                       <button type="button" class="btn btn-light">Köp</button>
-
-                                       <h4 class="font-weight-bold grey-text">
-                                           <strong> @Html.DisplayFor(modelItem => product.ProductPrice)</strong>
-                                       </h4>
-
-                                   </div>
-                                   <!--Card content-->
-
-                               </div>
-                               <!--Card-->
-                               </a>
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img src=" @Html.DisplayFor(modelItem => product.Photo)" class="card-img-top"
+                                     alt="">
 
 
-                               if (nyRad == 0)
-                               {
-                                 @:</div>
-                                }
+                                <div class="mask rgba-white-slight"></div>
+
+                            </div>
+                            <!--Card image-->
+                            <!--Card content-->
+                            <div class="card-body text-center">
+                                <!--Category & Title-->
+
+                                <h5>Solglasögon</h5>
+
+                                <h5>
+                                    <strong>
+                                        <a href="" class="dark-grey-text"> @Html.DisplayFor(modelItem => product.Brand)</a>
+
+                                    </strong>
+                                </h5>
+                               
+                                <a asp-action="AddItem" asp-route-id="@product.Id">Add to cart</a>
+
+                                <h4 class="font-weight-bold grey-text">
+                                    <strong> @Html.DisplayFor(modelItem => product.ProductPrice)</strong>
+                                </h4>
+
+                            </div>
+                            <!--Card content-->
+
+                        </div>
+                        <!--Card-->
+                    </a>
+
+
+                    if (nyRad == 0)
+                    {
+                    @:</div>
+                }
 
                 i++;
             }
 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Antal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.CartItems)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Quantity</td>
+                            <td>
+                                <a class="btn btn-secondary" asp-action="AddItem" asp-route-id="@item.Id">+</a>
+                                <a class="btn btn-secondary" asp-action="RemoveItem" asp-route-id="@item.Id">-</a>
+                            </td>
+                        </tr>
+                    }
 
-       
-        <!--Grid row-->
+                </tbody>
+            </table>
+            <a class="btn btn-secondary" asp-controller="Orders" asp-action="Create">Checkout</a>
+
+            <!--Grid row-->
 
 </section>
 </div>

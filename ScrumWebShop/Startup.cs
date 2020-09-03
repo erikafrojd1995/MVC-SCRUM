@@ -12,6 +12,7 @@ using ScrumWebShop.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ScrumWebShop.Services;
 
 namespace ScrumWebShop
 {
@@ -38,6 +39,8 @@ namespace ScrumWebShop
             services.AddControllersWithViews();
 
             services.AddRazorPages();
+
+            services.AddSingleton<ICartService, CartService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

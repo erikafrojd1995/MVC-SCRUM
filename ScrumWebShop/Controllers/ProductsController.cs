@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ScrumWebShop.Data;
+using ScrumWebShop.Services;
 
 namespace ScrumWebShop.Controllers
 {
@@ -14,16 +15,20 @@ namespace ScrumWebShop.Controllers
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ICartService _cart;
 
-        public ProductsController(ApplicationDbContext context)
+        public ProductsController(ApplicationDbContext context, ICartService cart)
         {
             _context = context;
+            _cart = cart;
         }
 
         [AllowAnonymous]
         //GET: Products + SEARCH BY KEYWORD in ProductName or ProductDescription
         public IActionResult Index(string productBrand, string productSex, string productColor, string searchString)
         {
+            ViewBag.CartItems = _cart.GetItems();
+
             var product = from p in _context.Products
                           select p;
 
@@ -215,6 +220,17 @@ namespace ScrumWebShop.Controllers
         {
             return _context.Products.Any(e => e.Id == id);
         }
-
+        [AllowAnonymous]
+        public IActionResult AddItem(Guid id)
+        {
+            _cart.AddItem(id);
+            return RedirectToAction(nameof(Index));
+        }
+        [AllowAnonymous]
+        public IActionResult RemoveItem(Guid id)
+        {
+            _cart.RemoveItem(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
