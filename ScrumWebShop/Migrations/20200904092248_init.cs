@@ -104,8 +104,7 @@ namespace ScrumWebShop.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<Guid>(nullable: false),
                     ProductNumber = table.Column<string>(nullable: false),
                     ProductName = table.Column<string>(nullable: false),
                     ProductPrice = table.Column<decimal>(nullable: false),
@@ -231,19 +230,18 @@ namespace ScrumWebShop.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
-                    OrderId = table.Column<int>(nullable: false),
-                    Quantity = table.Column<int>(nullable: false),
-                    OrderId1 = table.Column<Guid>(nullable: true)
+                    OrderId = table.Column<Guid>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrderItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderItems_Order_OrderId1",
-                        column: x => x.OrderId1,
+                        name: "FK_OrderItems_Order_OrderId",
+                        column: x => x.OrderId,
                         principalTable: "Order",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -286,9 +284,9 @@ namespace ScrumWebShop.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderItems_OrderId1",
+                name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
-                column: "OrderId1");
+                column: "OrderId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

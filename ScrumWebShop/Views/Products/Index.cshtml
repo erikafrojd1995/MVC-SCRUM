@@ -1,4 +1,5 @@
-﻿@model IEnumerable<ScrumWebShop.Data.Product>
+﻿
+@model IEnumerable<ScrumWebShop.Data.Product>
 @using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -261,12 +262,6 @@
         </div>
 
 
-
-    
-
-       
-
-
     }
     <section class="text-center mb-4 mt-3">
 
@@ -312,8 +307,8 @@
 
                                     </strong>
                                 </h5>
-                               
-                                <a asp-action="AddItem" asp-route-id="@product.Id">Add to cart</a>
+
+                                <a class="m-3 btn btn-primary" asp-action="AddItem" asp-route-id="@product.Id">Add to cart</a>
 
                                 <h4 class="font-weight-bold grey-text">
                                     <strong> @Html.DisplayFor(modelItem => product.ProductPrice)</strong>
@@ -362,7 +357,7 @@
 
             <!--Grid row-->
 
-</section>
+    </section>
 </div>
 
 

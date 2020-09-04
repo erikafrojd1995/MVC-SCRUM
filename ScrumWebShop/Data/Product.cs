@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScrumWebShop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -9,8 +10,8 @@ namespace ScrumWebShop.Data
 {
     public class Product
     {
-        [Key]
-        public int Id { get; set; }
+
+        public Guid Id { get; set; }
 
         [Required]
         [DisplayName("Produktnummer")]
@@ -43,6 +44,9 @@ namespace ScrumWebShop.Data
         //[Required]
         [DisplayName("Bild")]
         public string Photo { get; set; }
+
+
+
     }
 }
 

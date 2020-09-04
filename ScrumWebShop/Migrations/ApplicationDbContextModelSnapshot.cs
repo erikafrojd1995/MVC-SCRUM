@@ -266,10 +266,9 @@ namespace ScrumWebShop.Migrations
 
             modelBuilder.Entity("ScrumWebShop.Data.Product", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Brand")
                         .IsRequired()
@@ -312,10 +311,7 @@ namespace ScrumWebShop.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid?>("OrderId1")
+                    b.Property<Guid>("OrderId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Quantity")
@@ -323,7 +319,7 @@ namespace ScrumWebShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OrderId1");
+                    b.HasIndex("OrderId");
 
                     b.ToTable("OrderItems");
                 });
@@ -434,7 +430,9 @@ namespace ScrumWebShop.Migrations
                 {
                     b.HasOne("ScrumWebShop.Models.Order", null)
                         .WithMany("Items")
-                        .HasForeignKey("OrderId1");
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
